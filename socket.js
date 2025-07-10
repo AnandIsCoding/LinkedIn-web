@@ -5,6 +5,7 @@ const socket = io(
   {
     withCredentials: true,
     transports: ["websocket"],
+    path: "/server/socket.io",
   }
 );
 

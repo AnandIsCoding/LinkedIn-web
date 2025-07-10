@@ -97,10 +97,10 @@ const PrivacyPolicyModal = () => {
                 You can access, edit, or delete your personal data anytime
                 through account settings or by emailing us at{" "}
                 <a
-                  href="mailto:privacy@linkedsphere.com"
+                  href="mailto:privacy@devlinked.com"
                   className="text-blue-600 underline"
                 >
-                  privacy@linkedsphere.com
+                  privacy@devlinked.com
                 </a>
                 .
               </p>
