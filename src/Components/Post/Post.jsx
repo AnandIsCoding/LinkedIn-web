@@ -28,7 +28,7 @@ function Post({ post }) {
   const [comments, setComments] = useState([]);
   const [showShareDialog, setShowshareDialog] = useState(false);
   const [commentText, setCommenttext] = useState("");
-  const [commentCount, setCommentCount] = useState(post?.totalComments || 0);
+  const [commentCount, setCommentCount] = useState(post?.comments?.length || 0);
   const [likeCount, setLikecount] = useState(post?.likes?.length || 0);
 
   useEffect(() => {
