@@ -270,7 +270,7 @@ function Message() {
                 {/* Input Box */}
                 {activeConversationUser && (
                   <div className="border-t border-zinc-200 bg-white px-3 py-2">
-                    <div className="flex items-center gap-2 flex-wrap  mb-[-20vw] md:mb-0">
+                    <div className="flex items-center gap-2 flex-wrap  mb-[-5vw] md:mb-0">
                       <label
                         htmlFor="imageUpload"
                         className="cursor-pointer text-gray-600 hover:text-blue-500"
