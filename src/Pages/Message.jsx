@@ -180,11 +180,24 @@ function Message() {
     }
   }, [activeConversationId]);
 
-  useEffect(() => {
-    socket.on("receiveMessage", (response) => {
-      setAllMessages([...allMessages, response?.newMessage]);
-    });
-  }, [allMessages]);
+ useEffect(() => {
+  const handleReceiveMessage = (response) => {
+    setAllMessages((prev) => [...prev, response?.newMessage]);
+  };
+
+  socket.on("receiveMessage", handleReceiveMessage);
+
+  return () => {
+    socket.off("receiveMessage", handleReceiveMessage);
+  };
+}, []); // ✅ Empty dependency array
+
+useEffect(() => {
+  if (user) {
+    socket.connect();
+  }
+}, [user]);
+
 
   return (
     <MainLayout>
